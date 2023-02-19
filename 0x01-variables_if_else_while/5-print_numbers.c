@@ -8,7 +8,7 @@ int main(void)
 	int digit = 0;
 
 	do {
-		printf("%d\n", digit);
+		printf("%d", digit);
 		digit++;
 	} while (digit <= 9);
 
