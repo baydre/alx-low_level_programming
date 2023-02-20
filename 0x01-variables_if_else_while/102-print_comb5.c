@@ -8,33 +8,24 @@
 
 int main(void)
 {
-	int d2gi;
-	int d1gi;
-	int d2;
-	int d1;
+	int x, y;
 
-	for (d2gi = '0'; d2gi <= '9'; d2gi++) /*Prints first two digits combo*/
+	for (x = 0; x < 100; x++)
 	{
-		for (d1gi = '0'; d1gi <= '9'; d1gi++)
+		for (y = 0; y < 100; y++)
 		{
-			for (d2 = d2gi; d2 <= '9'; d2++) /*Print second pair of two digits combo*/
+			if (x < y)
 			{
-				for (d1 = d1gi + 1; d1 <= '9'; d1++)
+				putchar((x / 10) + 48);
+				putchar((x % 10) + 48);
+				putchar(' ');
+				putchar((y / 10) + 48);
+				putchar((y % 10) + 48);
+				if (x != 98 || y != 99)
 				{
-					putchar(d2gi);
-					putchar(d1gi);
+					putchar(',');
 					putchar(' ');
-					putchar(d2);
-					putchar(d1);
-
-					if (!((d2gi == '9' && d1gi == '8') &&
-						(d2 == '9' && d1 == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
-				d1 = '0';
 			}
 		}
 	}
