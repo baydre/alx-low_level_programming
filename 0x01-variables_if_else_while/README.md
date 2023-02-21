@@ -9,3 +9,6 @@
 - 7-print_tebahpla
 - 8-print_base16
 - 9-print_comb
+- 100-print_comb3
+- 101-print_comb4
+- 102-print_combo5
