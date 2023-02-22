@@ -10,9 +10,9 @@ int main(void)
 	char x[] = "_putchar";
 	int y;
 
-	for (y = 0; ch[y] != '\0'; y++)
+	for (y = 0; x[y] != '\0'; y++)
 	{
-		_putchar(ch[y]);
+		_putchar(x[y]);
 	}
 
 	_putchar('\n');
