@@ -7,24 +7,22 @@
 
 int main(void)
 {
-	int counter;
-	int countto = 50;
-	long a = 1;
-	long b = 2;
+	int i;
+	long int fibonacci[50];
 
-	for (counter = 1; counter <= (countto / 2); counter++)
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+
+	for (i = 2; i < 50; i++)
 	{
-		printf("%li %li ", a, b);
-		a += b;
-		b += a;
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if (i == 49)
+			printf("%ld\n", fibonacci[i]);
+		else
+			printf("%ld, ", fibonacci[i]);
 	}
-	if (countto % 2 == 1)
-		printf("%li", a);
-	if (countto != 49)
-		printf("%c", ',');
-		printf("%c", ' ');
-
-	printf("\n");
 
 	return (0);
 }
+
