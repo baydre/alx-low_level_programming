@@ -21,8 +21,9 @@ int main(void)
 	if (countto % 2 == 1)
 		printf("%li", a);
 	if (countto != 49)
-		printf("%c", ',')
-		printf("%c", ' ')
+		printf("%c", ',');
+		printf("%c", ' ');
+
 	printf("\n");
 
 	return (0);
