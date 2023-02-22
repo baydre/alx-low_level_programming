@@ -6,12 +6,13 @@
   * Description:  This function prints the alphabet, in lowercase,
   * followed by a new line. You can only use _putchar twice in your code.
   */
+
 void print_alphabet(void)
 {
 	char alpha = 'a';
 
 	do {
-		putchar(alpha);
+		_putchar(alpha);
 		alpha++;
 	} while (alpha <= 'z');
 	_putchar('\n');
