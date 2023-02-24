@@ -7,18 +7,18 @@
 
 void print_diagonal(int n)
 {
-	int pen;
-	int script;
+	int x, y;
 
-	if (n > 0)
-	{
-		for (pen = 1; pen <= n; pen++)
-		{
-			for (script = 1; script < pen; script++)
-				_putchar(' ');
-			_putchar('\\');
-			_putchar('\n');
-		}
-	}
-	else
+	if (n <= 0)
 		_putchar('\n');
+	for (x = 0; x < n; x++)
+	{
+		for (y = 0; y < x; y++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
+
+}
