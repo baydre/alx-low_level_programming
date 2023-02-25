@@ -9,3 +9,6 @@
 - 7-print_diagonal
 - 8-print_square
 - 9-fizz_buzz
+- 10-print_triangle
+- 100-prime_factor
+- 101-print_number
