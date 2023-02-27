@@ -1,1 +1,1 @@
-# 0x05-pointers_array_strings
+# 0x05-pointers_arrays_strings
