@@ -1,43 +1,43 @@
 #include "main.h"
 
-int find_sqrt(int num, int root);
-int _sqrt_recursion(int n);
+int is_divisible(int num, int div);
+int is_prime_number(int n);
 
 /**
- * find_sqrt - Finds the natural square root of an inputted number.
- * @num: The number to find the square root of.
- * @root: The root to be tested.
+ * is_divisible - Checks if a number is divisible.
+ * @num: The number to be checked.
+ * @div: The divisor.
  *
- * Return: If the number has a natural square root - the square root.
- *         If the number does not have a natural square root - -1.
+ * Return: If the number is divisible - 0.
+ *         If the number is not divisible - 1.
  */
-int find_sqrt(int num, int root)
+int is_divisible(int num, int div)
 {
-	if ((root * root) == num)
-		return (root);
+	if (num % div == 0)
+		return (0);
 
-	if (root == num / 2)
-		return (-1);
+	if (div == num / 2)
+		return (1);
 
-	return (find_sqrt(num, root + 1));
+	return (is_divisible(num, div + 1));
 }
 
 /**
- * _sqrt_recursion - Returns the natural square root of a number.
- * @n: The number to return the square root of.
+ * is_prime_number - Checks if a number is prime.
+ * @n: The number to be checked.
  *
- * Return: If n has a natural square root - the natural square root of n.
- *         If n does not have a natural square root - -1.
+ * Return: If the integer is not prime - 0.
+ *         If the number is prime - 1.
  */
-int _sqrt_recursion(int n)
+int is_prime_number(int n)
 {
-	int root = 0;
+	int div = 2;
 
-	if (n < 0)
-		return (-1);
+	if (n <= 1)
+		return (0);
 
-	if (n == 1)
+	if (n >= 2 && n <= 3)
 		return (1);
 
-	return (find_sqrt(n, root));
+	return (is_divisible(n, div));
 }
