@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * _strncpy - Copies at most an inputted number
@@ -9,6 +9,7 @@ include "main.h"
  *
  * Return: A pointer to the resulting string dest.
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int digit = 0, src_len = 0;
