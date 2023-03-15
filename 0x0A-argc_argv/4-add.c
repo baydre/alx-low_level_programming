@@ -17,9 +17,10 @@ int main(int argc, char *argv[])
 	int a, b, sum = 0;
 	char *sybl;
 
-	if (argc == 3)
+	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
 
 	for (a = 1; argv[a]; a++)
