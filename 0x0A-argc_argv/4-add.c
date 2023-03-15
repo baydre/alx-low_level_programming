@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	int a, b, sum = 0;
 	char *sybl;
 
-	if (argc < 2)
+	if (argc == 3)
 	{
 		printf("0\n");
 		return (0);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			sum = a + b;
+			sum += b;
 		}
 	}
 		printf("%d\n", sum);
