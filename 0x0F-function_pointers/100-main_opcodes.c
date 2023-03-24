@@ -10,26 +10,36 @@
 int main(int argc, char *argv[])
 {
 	int bytes, i;
-	unsigned char *func_ptr;
+	int (*location)(int, char **) = main;
+	unsigned char opcode;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+
 	bytes = atoi(argv[1]);
+
 	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	func_ptr = (unsigned char *)main;
-	i = 0;
-	if (bytes > 0)
+
+	for (i = 0; i < bytes; i++)
 	{
-		while (i < (bytes - 1))
-			printf("%02hhx ", func_ptr[i++]);
-		printf("%hhx\n", func_ptr[i]);
+		opcode = *(unsigned char *)location;
+		printf("%.2x", opcode);
+
+		if (i == bytes - 1)
+			continue;
+		printf(" ");
+
+		location++;
 	}
+
+	printf("\n");
+	
 	return (0);
 }
