@@ -4,7 +4,7 @@ void baydre(void) __attribute__((constructor));
 
 /**
  * baydre - prints before the main
- * function is executed
+ * 	function is executed
  */
 void baydre(void)
 {
