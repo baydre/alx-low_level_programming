@@ -1,13 +1,12 @@
-#ifndef _LISTS_H
-#define _LISTS_H
+#ifndef LISTS_H
+#define LISTS_H
+#include <stdlib.h>
 
 /*
  * File: list.h
  * Auth: Baydre
  * Desc: prototypes of all your functions
  */
-
-#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
