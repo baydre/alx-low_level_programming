@@ -4,6 +4,7 @@
  * get_bit - returns the value of a bit
  * @n: bit passed to the function
  * @index: index to be solved
+ *
  * Return: value of index otherwise -1
  */
 
