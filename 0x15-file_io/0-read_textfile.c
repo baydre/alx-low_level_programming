@@ -15,13 +15,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t f_opn, f_read, f_wrt;
 	char *buffer = malloc(sizeof(char) * letters);
 
-	/* condition: filename is NULL return 0 */
+	/* condition: filename is NULL return 0. */
 	if (filename == NULL)
 	{
 		return (0);
 	}
 
-	/* condition: file cannot be opened or read, return 0 */
+	/* condition: file cannot be opened or read, return 0. */
 	if (buffer == NULL)
 	{
 		return (0);
