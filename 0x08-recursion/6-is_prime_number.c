@@ -4,23 +4,22 @@
  * otherwise return 0.
  */
 #include "main.h"
-
+int is_prime_number(int n);
+int prime_num(int x, int y);
 /**
  * is_prime_number - returns a prime number
  * @n: prime number to be returned
- * @x: value to checked
- * @y: divisor
+ *
  * Return: (n == prime_num) ? '1' : '0'.
  */
-int prime_num(int x, int y);
 int is_prime_number(int n)
 {
 	return (prime_num(n, n - 1));
 }
 /**
- * prime_num - checks for prime number
- * @x: value to be checked
- * @y: divisor
+ * prime_num - checks for prime number.
+ * @x: value to checked.
+ * @y: divisor.
  * Return: recursive funtion and base cases.
  */
 int prime_num(int x, int y)
