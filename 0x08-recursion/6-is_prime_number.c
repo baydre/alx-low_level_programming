@@ -8,6 +8,8 @@
 /**
  * is_prime_number - returns a prime number
  * @n: prime number to be returned
+ * @x: value to checked
+ * @y: divisor
  * Return: (n == prime_num) ? '1' : '0'.
  */
 int prime_num(int x, int y);
