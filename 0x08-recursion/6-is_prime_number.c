@@ -11,6 +11,7 @@
  * Return: (n == prime_num) ? '1' : '0'.
  */
 int is_prime_number(int n)
+int prime_num(int x, int y)
 {
 	return (prime_num(n, n - 1));
 }
