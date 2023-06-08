@@ -10,8 +10,8 @@
  * @n: prime number to be returned
  * Return: (n == prime_num) ? '1' : '0'.
  */
+int prime_num(int x, int y);
 int is_prime_number(int n)
-int prime_num(int x, int y)
 {
 	return (prime_num(n, n - 1));
 }
