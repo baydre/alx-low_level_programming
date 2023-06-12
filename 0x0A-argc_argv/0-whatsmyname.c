@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argc; /* used parameter argc */
+	(void)argc; /* unused parameter argc */
 
 	/* prints its name, followed by \n */
 	printf("%s\n", argv[0]);
