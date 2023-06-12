@@ -1,5 +1,5 @@
 /*
- * Command line, Task 2: Program that prints all arguments it receives.
+ * Command line arguments, Task 2: Program that prints all arguments it receives.
  * All args should be printed, including the first one.
  * Only print one argument per line, ending with a '\n'.
  */
