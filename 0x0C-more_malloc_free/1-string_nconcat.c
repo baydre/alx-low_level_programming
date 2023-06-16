@@ -13,38 +13,41 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, b = n;
+	unsigned int b = n;
+	size_t len_s1, len_s2, len_concat;
 	char *soln;
 
-	/* calculate lengths strlen using strlen function */
-	len1 = (s1 != NULL) ? strlen(s1) : 0;
-	len2 = (s2 != NULL) ? strlen(s2) : 0;
-
-	/**/
-	if (b >= len2)
+	/* treat as an empty string if s1, s2 is NULL */
+	if (s1 == NULL)
 	{
-		b = len2;
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
-	/* call malloc_checked from task 0 to alloc_mem */
-	soln = malloc_checked(len1 + b + 1);
+	/* gets the lengths of the strings */
+	len_s1 = strlen(s1);
+	len_s2 = strlen(s2);
 
+	/* determines the length to be concatenated */
+	len_concat = (b >= len_s2) ? len_s2 : b;
+
+	soln = (char*)malloc_checked(len_s1 + len_concat + 1);
 	if (soln == NULL)
 	{
 		return (NULL);
 	}
 
-	if (s1 != NULL)
-	{
-		memcpy(soln, s1, len1);
-	}
+	/* copy s1 to soln */
+	memcpy(soln, s1, len_s1);
 
-	if (b > 0 && s2 != NULL)
-	{
-		memcpy(soln + len1, s2, b);
-	}
+	/* copy s2 to n-bytes */
+	memcpy(soln + len_s1, s2, sizeof(char) * len_concat);
 
-	soln[len1 + n] = '\0';
+	/* terminate result using NULL */
+	soln[len_s1 + len_concat] = '\0';
 
 	return (soln);
 }
