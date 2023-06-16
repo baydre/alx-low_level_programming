@@ -2,7 +2,7 @@
  * more_malloc_free, Task 3: function that creates an array of integers.
  */
 #include "main.h"
-
+#include "0-malloc_checked.c"
 /**
  * array_range - takes arguments: min & max.
  * @min: minimum array range.
