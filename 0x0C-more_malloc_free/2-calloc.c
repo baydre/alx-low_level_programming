@@ -3,7 +3,7 @@
  * using malloc.
  */
 #include "main.h"
-
+#include "0-malloc_checked.c"
 /**
  * _calloc - takes two arguments, number of elements
  * size of each element.
