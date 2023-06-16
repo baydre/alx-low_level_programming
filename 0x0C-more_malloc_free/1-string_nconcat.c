@@ -13,38 +13,44 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, b = n;
+	unsigned int len1, b = n;
 	char *soln;
-
-	/* calculate lengths strlen using strlen function */
-	len1 = (s1 != NULL) ? strlen(s1) : 0;
-	len2 = (s2 != NULL) ? strlen(s2) : 0;
-
-	/**/
-	if (b >= len2)
+	
+	if (s1 == NULL)
 	{
-		b = len2;
+		s1 = "";
 	}
 
-	/* call malloc_checked from task 0 to alloc_mem */
-	soln = malloc_checked(len1 + b + 1);
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	for (len1 = 0; s1[len1]; len1++)
+	{
+		len1++;
+	}
+		
+	soln = malloc(sizeof(char) * (len1 + 1));
 
 	if (soln == NULL)
 	{
 		return (NULL);
 	}
+	
+	b = 0;
 
-	if (s1 != NULL)
+	for (len1 = 0; s1[len1]; len1++)
 	{
-		memcpy(soln, s1, len1);
+		soln[b++] = s1[len1];
 	}
 
-	if (b > 0 && s2 != NULL)
+	for (len1 = 0; s2[len1] && len1 < n; len1++)
 	{
-		memcpy(soln + len1, s2, b);
+		soln[b++] = s2[len1];
 	}
 
-	soln[len1 + n] = '\0';
+	soln[b] = '\0';
 
 	return (soln);
 }
