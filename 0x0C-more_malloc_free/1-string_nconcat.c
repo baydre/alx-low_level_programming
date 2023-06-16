@@ -3,7 +3,7 @@
  */
 
 #include "main.h"
-
+#include "0-malloc_checked.c"
 /**
  * string_nconcat - concatenates two strings.
  * @s1: first string.
