@@ -9,6 +9,7 @@
  * @array: pointer to an array integer.
  * @size: array size.
  * @cmp: function pointer.
+ * Return: (-1) minus one.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
