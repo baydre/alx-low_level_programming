@@ -4,9 +4,10 @@
 #include "function_pointers.h"
 
 /**
- * print_name - takes two parameters 'f' and 'name'.
- * name: the argument passed.
- * @f: call the function.
+ * print_name - calls the function pointed to "f"
+ * and pass the "name".
+ * @name: argument passed.
+ * @f: function pointer.
  */
 void print_name(char *name, void (*f)(char *))
 {
