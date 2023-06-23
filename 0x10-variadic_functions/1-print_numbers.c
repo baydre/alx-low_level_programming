@@ -7,7 +7,7 @@
 /**
  * print_numbers - takes "seperator" string, an unsigned int "n",
  * and a variable number of arguments.
- * @separator: string that seperates numbers to be printed.
+ * @separator: string that separates numbers to be printed.
  * @n: number of arguments.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
