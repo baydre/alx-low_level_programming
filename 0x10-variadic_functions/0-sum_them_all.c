@@ -1,11 +1,11 @@
 /*
- * variadic_functions, Task 0: function that returns the sum of all
- * its parameters.
+ * variadic_functions, Task 0: function that returns the sum of
+ * all its parameters.
  */
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - calculates the sum of all parameters given.
+ * sum_them_all - calculates sum of all parameters given.
  * @n: number of arguments passed to the function.
  * Return: calculated sum.
  */
