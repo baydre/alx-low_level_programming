@@ -7,7 +7,7 @@
 /**
  * sum_them_all - calculates the sum of all parameters given.
  * @n: number of arguments passed to the function.
- * Result: calculated sum.
+ * Return: calculated sum.
  */
 int sum_them_all(const unsigned int n, ...)
 {
@@ -25,6 +25,7 @@ int sum_them_all(const unsigned int n, ...)
 	for (b = 0; b < n; b++)
 	{
 		int _num = va_arg(_args, int);
+
 		sum += _num;
 	}
 
