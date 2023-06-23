@@ -1,5 +1,6 @@
 /*
- * variadic_functions, Task 2: function that prints strings, followed by newline.
+ * variadic_functions, Task 2: function that prints strings,
+ * followed by newline.
  */
 #include "variadic_functions.h"
 
@@ -25,7 +26,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", str);
 		}
-		else {
+		else
+		{
 			printf("(nil)");
 		}
 
