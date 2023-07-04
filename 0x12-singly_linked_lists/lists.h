@@ -6,6 +6,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * struct s_list - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
 typedef struct s_list
 {
 	char *str;
