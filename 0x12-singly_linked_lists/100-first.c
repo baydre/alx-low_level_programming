@@ -7,8 +7,8 @@
 void exe_b4_main(void) __attribute__((constructor));
 
 /**
- * baydre - prints before the main
- * 	function is executed
+ * exe_b4_main - prints before the main
+ * function is executed
  */
 void exe_b4_main(void)
 {
