@@ -10,7 +10,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	/*create a node*/
 	dlistint_t *xptr = malloc(sizeof(dlistint_t));
 	if (xptr == NULL)
-		return (NULL)
+		return (NULL);
 	/*values assignment to node using n-arg*/
 	xptr->n = n;
 	/*make the node at the top of the list*/
