@@ -14,7 +14,17 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	/*make the node at the top of the list*/
 	xptr->next = *head;
 	xptr->prev = NULL;
-	*head = xptr;
+	if (*head == NULL)
+	{
+		*head = xptr;
+		xptr->next = NULL;
+	}
+	else
+	{
+		xptr->next = *head;
+		(*head)->prev = xptr;
+		*head = xptr;
+	}
 	/*return a pointer to the node created*/
 	return (xptr);
 }
