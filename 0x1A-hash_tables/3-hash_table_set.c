@@ -1,3 +1,7 @@
+/*
+ * hash_tables, Task 3: function that adds an element
+ * to the hash table.
+ */	
 #include "hash_tables.h"
 
 /**
